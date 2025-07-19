@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const maxDodges = window.innerWidth < 600 ? 12 : 6;
 
   fondueBtn.addEventListener('click', () => {
-    message.textContent = "Great choice. Fondue is clearly superior! 🫕🔥😎";
+    message.textContent = "Great choice. Fondue is clearly superior! 🫕🔥😎 Love, Anja";
     confetti({
       particleCount: 150,
       spread: 70,
