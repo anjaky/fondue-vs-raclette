@@ -40,8 +40,20 @@ button {
 
 #raclette {
   left: 30%;
+  touch-action: manipulation;
 }
 
 #fondue {
   left: 60%;
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    height: 300px; /* more vertical space to dodge */
+  }
+
+  button {
+    font-size: 22px;
+    padding: 20px 40px;
+  }
 }

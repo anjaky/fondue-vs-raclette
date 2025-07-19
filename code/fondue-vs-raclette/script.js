@@ -1,13 +1,15 @@
-// waits until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // Fondue is now the winning button
   const fondueBtn = document.getElementById('fondue');
+  const racletteBtn = document.getElementById('raclette');
   const message = document.getElementById('message');
+  const counterDisplay = document.getElementById('dodgeCount');
+  const container = document.querySelector('.button-container');
+
+  let dodgeCount = 0;
+  const maxDodges = window.innerWidth < 600 ? 12 : 6; // more dodges allowed on small screens
 
   fondueBtn.addEventListener('click', () => {
-    message.textContent = "Grate choice. Fondue is clearly superior! 🫕🔥😎";
-
-    // Confetti 🎉
+    message.textContent = "Great choice. Fondue is clearly superior! 🫕🔥😎";
     confetti({
       particleCount: 150,
       spread: 70,
@@ -15,17 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // raclette runs away when you try to catch it
-  const racletteBtn = document.getElementById('raclette');
-  const container = document.querySelector('.button-container');
+  // Set initial position for raclette button (important for consistent styling)
+  racletteBtn.style.top = '0px';
 
-  let dodgeCount = 0; // count how many times Raclette escapes
-
-  racletteBtn.addEventListener('mouseover', () => {
-    if (dodgeCount >= 6) {
-      const counterDisplay = document.getElementById('dodgeCount');
+  function dodgeRaclette() {
+    if (dodgeCount >= maxDodges) {
       counterDisplay.textContent = "Come on... we all know Fondue's the GOAT. Just surrender already, I'm exhausted counting!";
-      return; // stop moving and counting
+      return;
     }
 
     const maxX = container.offsetWidth - racletteBtn.offsetWidth;
@@ -37,7 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
     racletteBtn.style.top = `${randomY}px`;
 
     dodgeCount++;
-    const counterDisplay = document.getElementById('dodgeCount');
     counterDisplay.textContent = `Raclette has dodged you ${dodgeCount} ${dodgeCount === 1 ? 'time' : 'times'}!`;
-  });
-});
+  }
+
+  racletteBtn.addEventListener('mouseover', dodgeRaclette);
+
+  r
