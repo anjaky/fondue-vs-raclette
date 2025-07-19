@@ -1,0 +1,47 @@
+body {
+  font-family: "Bungee", sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/*.bungee-regular {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}*/
+
+h1 {
+  margin-bottom: 80px;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(227, 217, 123, 1);
+}
+
+.button-container {
+  position: relative;
+  height: 200px;
+}
+
+button {
+  padding: 15px 30px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  transition: left 0.3s ease, top 0.3s ease;
+  color: rgba(28, 25, 3, 1.0);
+  background-color: white;
+  border-width: 1px;
+  border-color: rgba(227, 217, 123, 1.0);
+  border-radius: 40px;
+}
+
+#raclette {
+  left: 30%;
+}
+
+#fondue {
+  left: 60%;
+}
