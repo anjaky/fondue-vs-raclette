@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector('.button-container');
 
   let dodgeCount = 0;
-  const maxDodges = window.innerWidth < 600 ? 12 : 6; // more dodges allowed on small screens
+  const maxDodges = window.innerWidth < 600 ? 12 : 6;
 
   fondueBtn.addEventListener('click', () => {
     message.textContent = "Great choice. Fondue is clearly superior! 🫕🔥😎";
@@ -16,9 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
       origin: { y: 0.6 }
     });
   });
-
-  // Set initial position for raclette button (important for consistent styling)
-  racletteBtn.style.top = '0px';
 
   function dodgeRaclette() {
     if (dodgeCount >= maxDodges) {
@@ -39,5 +36,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   racletteBtn.addEventListener('mouseover', dodgeRaclette);
-
-  r
+  racletteBtn.addEventListener('touchstart', dodgeRaclette);
+});

@@ -2,19 +2,15 @@ body {
   font-family: "Bungee", sans-serif;
   text-align: center;
   margin-top: 100px;
+  padding: 0 20px;
+  background-color: white;
 }
-
-/*.bungee-regular {
-  font-family: "Bungee", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}*/
 
 h1 {
   margin-bottom: 80px;
   font-weight: 400;
-  font-style: normal;
   color: rgba(227, 217, 123, 1);
+  font-size: 2rem;
 }
 
 .button-container {
@@ -25,36 +21,48 @@ h1 {
 button {
   padding: 15px 30px;
   font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
   font-size: 18px;
   cursor: pointer;
   position: absolute;
   transition: left 0.3s ease, top 0.3s ease;
-  color: rgba(28, 25, 3, 1.0);
+  color: rgba(28, 25, 3, 1);
   background-color: white;
-  border-width: 1px;
-  border-color: rgba(227, 217, 123, 1.0);
+  border: 1px solid rgba(227, 217, 123, 1);
   border-radius: 40px;
 }
 
 #raclette {
   left: 30%;
+  top: 0px;
   touch-action: manipulation;
 }
 
 #fondue {
   left: 60%;
+  top: 0px;
 }
 
+#message {
+  font-size: 18px;
+  color: rgba(97, 97, 95, 1);
+  margin-top: 40px;
+}
+
+#dodgeCount {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  color: darkred;
+  margin-top: 20px;
+}
+
+/* Mobile Styling */
 @media (max-width: 600px) {
   .button-container {
     height: 300px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-evenly;
-    position: relative;
   }
 
   button {
@@ -67,6 +75,15 @@ button {
   #fondue,
   #raclette {
     left: auto;
+    top: auto;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #message,
+  #dodgeCount {
+    font-size: 16px;
   }
 }
-
