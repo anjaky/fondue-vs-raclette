@@ -1,0 +1,89 @@
+body {
+  font-family: "Bungee", sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  padding: 0 20px;
+  background-color: white;
+}
+
+h1 {
+  margin-bottom: 80px;
+  font-weight: 400;
+  color: rgba(227, 217, 123, 1);
+  font-size: 2rem;
+}
+
+.button-container {
+  position: relative;
+  height: 210px;
+}
+
+button {
+  padding: 15px 30px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  transition: left 0.3s ease, top 0.3s ease;
+  color: rgba(28, 25, 3, 1);
+  background-color: white;
+  border: 1px solid rgba(227, 217, 123, 1);
+  border-radius: 40px;
+}
+
+#raclette {
+  left: 30%;
+  top: 0px;
+  touch-action: manipulation;
+}
+
+#fondue {
+  left: 60%;
+  top: 0px;
+}
+
+#message {
+  font-size: 18px;
+  color: rgba(97, 97, 95, 1);
+  margin-top: 40px;
+}
+
+#dodgeCount {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  color: darkred;
+  margin-top: 20px;
+}
+
+/* Mobile Styling */
+@media (max-width: 600px) {
+  .button-container {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  button {
+    position: relative;
+    font-size: 22px;
+    padding: 20px 40px;
+    margin: 10px 0;
+  }
+
+  #fondue,
+  #raclette {
+    left: auto;
+    top: auto;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #message,
+  #dodgeCount {
+    font-size: 16px;
+  }
+}
