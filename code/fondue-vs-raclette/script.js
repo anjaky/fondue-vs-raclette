@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function dodgeRaclette() {
     if (dodgeCount >= maxDodges) {
-      counterDisplay.textContent = "Come on... we all know Fondue's the GOAT. Just surrender already, I'm exhausted counting!";
+      counterDisplay.textContent = "Come on... we all know fondue's the GOAT. Just surrender already, I'm exhausted counting!";
       return;
     }
 
